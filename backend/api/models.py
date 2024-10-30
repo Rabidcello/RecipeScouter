@@ -10,3 +10,10 @@ class Note(models.Model):
     def __str__(self):
         return self.title
 # Create your models here.
+
+class UserItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    item = models.CharField(max_length=235)
+
+    def __str__(self):
+        return self.title
