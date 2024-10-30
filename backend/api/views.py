@@ -26,6 +26,7 @@ class NoteDelete(generics.CreateAPIView):
     def get_queryset(self):
         user = self.request.user
         return Note.objects.filter(author=user)
+    
 # Create your views here.
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
